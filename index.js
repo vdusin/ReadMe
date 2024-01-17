@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMardown.js')
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -11,7 +12,23 @@ const questions = [
       {
         type: 'input',
         name: 'description',
-        message: 'What is the title?',
+        message: 'What is the desciption?',
+      },
+      {
+        type: 'input',
+        name: 'installation',
+        message: 'What do you need to install?',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'What is the applications usage?',
+      },
+      {
+        type: 'checkbox',
+        name: 'license',
+        message: 'What license did you use?',
+        choices: ["MIT", "Apache", "Mozilla", "No License"]
       },
 ];
 
